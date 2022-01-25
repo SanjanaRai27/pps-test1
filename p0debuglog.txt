@@ -1,1 +1,19 @@
- 
+(gdb) b main
+Breakpoint 1 at 0x63e: file p0final.c, line 4.
+(gdb) r
+Starting program: /home/runner/pps-test1-4/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p0final.c:4
+4     printf("My name is Sanjana Rai bs\n");
+(gdb) n
+My name is Sanjana Rai bs
+5     return 0;
+(gdb) n
+6   }
+(gdb) q
+A debugging session is active.
+
+    Inferior 1 [process 48] will be killed.
+
+Quit anyway? (y or n) y 
