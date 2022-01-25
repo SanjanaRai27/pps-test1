@@ -1,0 +1,53 @@
+(gdb) b main
+Breakpoint 1 at 0x7fc: file p3final.c, line 16.
+(gdb) r
+Starting program: /home/runner/pps-test1-4/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p3final.c:16
+16  {
+(gdb) n
+18    input(&p,&q);
+(gdb) s
+input (a=0x7fffa8a250fc, b=0x7fffa8a25100) at p3final.c:4
+4     printf("Enter two numbers\n");
+(gdb) n
+Enter two numbers
+5     scanf("%d %d",a,b);
+(gdb) n
+4
+5
+6   }
+(gdb) n
+main () at p3final.c:19
+19    add(p,q,&sum);
+(gdb) p p
+$1 = 4
+(gdb) p q
+$2 = 5
+(gdb) s
+add (a=4, b=5, sum=0x7fffa8a25104) at p3final.c:9
+9     *sum=a+b;
+(gdb) n
+10  }
+(gdb) n
+main () at p3final.c:20
+20    output(p,q,sum);
+(gdb) p sum
+$3 = 9
+(gdb) s
+output (a=4, b=5, sum=9) at p3final.c:13
+13    printf("Sum of %d and %d is %d\n",a,b,sum);
+(gdb) n
+Sum of 4 and 5 is 9
+14  }
+(gdb) n
+main () at p3final.c:21
+21    return 0;
+(gdb) n
+22  }(gdb) q
+A debugging session is active.
+
+    Inferior 1 [process 743] will be killed.
+
+Quit anyway? (y or n) y
