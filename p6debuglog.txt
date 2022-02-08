@@ -1,13 +1,11 @@
- gcc -g p6original.c
+ gcc -g p6final.c
  ./a.out
 Enter number of values to add:
 5
 1 + 2 + 3 + 4 + 5 is 15 
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
-Copyright (C) 2018 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
- 
+Copyright (C) 2018 Free Sof 
  gcc -g p6final.c
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
