@@ -25,4 +25,5 @@ int main()
   cmp(a,b,c,&result);
   output(result);
   return 0;
-}
+}//your code is nice , your review is done.ok?
+//thank you
