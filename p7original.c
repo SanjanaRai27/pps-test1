@@ -1,33 +1,43 @@
-#include<stdio.h>
-#include<math.h>
-float input()
+#include <stdio.h>
+int input_array_size()
 {
-    float n;
-    printf("enter the number to find its root\n");
-    scanf("%f",&n);
-    return n;
+  int n;
+  printf("Enter size of array\n");
+  scanf("%d",&n);
+  return n;
 }
-float my_sqrt(float n) 
-{ 
-    float a=n;  
-    float b=0;
-    float q=0.000001; 
-    while (fabs(a-b)>q)
-    { 
-        a=(a+b)/2; 
-        b=n/a; 
-    } 
-    return a; 
-} 
-void output(float n,float sqrt_result)
+void input_array(int n,int a[n])
 {
-    printf("the square of %f is: %f\n",n,sqrt_result);
+  printf("Enter the numbers you wish to add\n");
+  for(int i=0;i<n;i++)
+  {
+    scanf("%d",&a[i]);
+  }  
+}
+int sum_n_arrays(int n,int a[n])
+{
+  int sum=0;
+  for(int i=0;i<n;i++)
+  {
+    sum=sum+a[i];
+  }
+  return sum;
+}
+void out_put(int n, int a[n], int sum)
+{
+  int i;
+  for(i=0;i<n-1;i++)
+  {
+    printf("%d + ",a[i]);
+   
+  }
+  printf("%d is %d",a[i],sum);
 }
 int main()
 {
-    float a,b;
-    a=input();
-    b=my_sqrt(a);
-    output(a,b);
-    return 0;
+  int size=input_array_size();
+  int ar[size];
+  input_array(size,ar);
+  int sum0=sum_n_arrays(size,ar);
+  out_put(size,ar,sum0); 
 }
