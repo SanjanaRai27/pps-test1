@@ -11,7 +11,7 @@ void input_array(int n,int a[n])
   printf("Enter the numbers you wish to add\n");
   for(int i=0;i<n;i++)
   {
-    scanf("%d",&a[i]);
+    scanf("%d",&a[i]); 
   }  
 }
 int sum_n_arrays(int n,int a[n])
